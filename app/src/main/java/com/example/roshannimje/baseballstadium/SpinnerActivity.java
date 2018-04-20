@@ -67,6 +67,7 @@ public class SpinnerActivity extends AppCompatActivity {
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(getApplicationContext(), "Seat information added successfully", Toast.LENGTH_SHORT).show();
                 System.out.print("Hello");
+                System.out.print("Hello2");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
