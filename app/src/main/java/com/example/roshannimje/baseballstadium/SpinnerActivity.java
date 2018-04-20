@@ -21,7 +21,7 @@ public class SpinnerActivity extends AppCompatActivity {
     FirebaseFirestore database = FirebaseFirestore.getInstance();
 
 
-    String[] ZONELIST = {"Zone 1", "Zone 2", "Zone 3", "Zone 4"};
+    String[] ZONELIST = {"Zone 1", "Zone 2 ", "Zone 3", "Zone 4"};
     String[] BLOCKLIST = {"Block 1", "Block 2", "Block 3", "Block 4"};
     String[] ROWLIST = {"Row 1", "Row 2", "Row 3", "Row 4"};
     String[] SEATLIST = {"Seat 1", "Seat 2", "Seat 3", "Seat 4"};
@@ -66,7 +66,8 @@ public class SpinnerActivity extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(getApplicationContext(), "Seat information added successfully", Toast.LENGTH_SHORT).show();
-
+                System.out.print("Hello");
+                System.out.print("Hello2");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
