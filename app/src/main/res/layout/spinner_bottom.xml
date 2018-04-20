@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+        <!--android:id="@+id/spinner"-->
+        <!--app:ms_alignLabels="false"-->
+        <!--app:ms_arrowColor="@color/arrow"-->
+        <!--app:ms_arrowSize="16dp"-->
+        <!--app:ms_baseColor="@color/base"-->
+        <!--app:ms_dropDownHintView="@layout/my_custom_dropdown_hint_item_layout"-->
+        <!--app:ms_enableErrorLabel="false"-->
+        <!--app:ms_enableFloatingLabel="false"-->
+        <!--app:ms_errorColor="@color/error"-->
+        <!--app:ms_floatingLabelColor="@color/floating_label"-->
+        <!--app:ms_floatingLabelText="floating label"-->
+        <!--app:ms_highlightColor="@color/highlight"-->
+        <!--app:ms_hint="hint"-->
+        <!--app:ms_hintColor="@color/hint"-->
+        <!--app:ms_hintView="@layout/my_custom_hint_item_layout"-->
+        <!--app:ms_multiline="false"-->
+        <!--app:ms_thickness="2dp"-->
+        <!--app:ms_typeface="typeface.ttf"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
