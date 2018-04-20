@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     int outerColors[];
     int innerColors[];
 
-
     //    private String outerColor = "#1A237E";
     private String outerDefaultColor = "#E0E0E0";
     private String innerDefaultColor = "#F5F5F5";
@@ -83,13 +82,12 @@ public class MainActivity extends AppCompatActivity {
         pieDataSetInner = new PieDataSet(entries, "");
 
         pieDataOuter = new PieData(pieDataSetOuter);
-        pieDataOuter.setValueTextSize(13f);
+        pieDataOuter.setValueTextSize(0f);
         pieDataInner = new PieData(pieDataSetInner);
-        pieDataInner.setValueTextSize(13f);
+        pieDataInner.setValueTextSize(0f);
 
         pieDataSetOuter.setColors(new int[]{Color.parseColor("#80DEEA")});
         pieDataSetOuter.setSliceSpace(1);
-//        pieDataSetOuter.setHighlightEnabled(true);
         pieDataSetInner.setColors(new int[]{Color.parseColor("#B2EBF2")});
         pieDataSetInner.setSliceSpace(1);
 
@@ -125,159 +123,136 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
         final int[] count = {0};
-        new Timer().schedule(new TimerTask() {
-            @Override
-            public void run() {
-                if (count[0] == 30)
-                    count[0] = 0;
-//                switch (count[0]) {
-//                    case 0:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor("#3F51B5"), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor)});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor("#9FA8DA"), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor)});
-//                        break;
-//                    case 1:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor(outerColor), Color.parseColor("#3F51B5"), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor)});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor(innerColor), Color.parseColor("#9FA8DA"), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor)});
-//                        break;
-//                    case 2:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor(outerExtraLightColor), Color.parseColor(outerLightColor), Color.parseColor("#3F51B5"), Color.parseColor(outerLightColor), Color.parseColor(outerExtraLightColor), Color.parseColor(outerColor)});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor(innerExtraLigthColor), Color.parseColor(innerLightColor), Color.parseColor("#9FA8DA"), Color.parseColor("#C5CAE9"), Color.parseColor("#E8EAF6"), Color.parseColor(innerColor)});
-//                        break;
-//                    case 3:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor("#3F51B5"), Color.parseColor(outerColor), Color.parseColor(outerColor)});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor("#9FA8DA"), Color.parseColor(innerColor), Color.parseColor(innerColor)});
-//                        break;
-//                    case 4:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor("#3F51B5"), Color.parseColor(outerColor)});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor("#9FA8DA"), Color.parseColor(innerColor)});
-//                        break;
-//                    case 5:
-//                        pieDataSetOuter.setColors(new int[]{Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor(outerColor), Color.parseColor("#3F51B5")});
-//                        pieDataSetInner.setColors(new int[]{Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor(innerColor), Color.parseColor("#9FA8DA")});
-//                        break;
+//        new Timer().schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                if (count[0] == 30)
+//                    count[0] = 0;
+//
+        outerColors = new int[]{Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
+                Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor)};
+
+        innerColors = new int[]{Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
+                Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor)};
+//
+        setSectinColor(1, Color.parseColor("#E91E63"), Color.parseColor("#F06292"));
+//
+//                int outerColor = outerColors[count[0]];
+//                outerColors[count[0]] = Color.parseColor(outerDarkColor);
+//                int innerColor = innerColors[count[0]];
+//                innerColors[count[0]] = Color.parseColor(innerDarkColor);
+//
+//                if (count[0] == 0) {
+//                    outerColors[outerColors.length - 1] = Color.parseColor(outerLightColor);
+//                    innerColors[innerColors.length - 1] = Color.parseColor(innerLightColor);
+//                } else {
+//                    outerColors[count[0] - 1] = Color.parseColor(outerLightColor);
+//                    innerColors[count[0] - 1] = Color.parseColor(innerLightColor);
 //                }
-
-                outerColors = new int[]{Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor),
-                        Color.parseColor(outerDefaultColor), Color.parseColor(outerDefaultColor)};
-
-                innerColors = new int[]{Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor),
-                        Color.parseColor(innerDefaultColor), Color.parseColor(innerDefaultColor)};
-
-                setSectinColor(3, Color.parseColor("#E91E63"), Color.parseColor("#F06292"));
-
-                int outerColor = outerColors[count[0]];
-                outerColors[count[0]] = Color.parseColor(outerDarkColor);
-                int innerColor = innerColors[count[0]];
-                innerColors[count[0]] = Color.parseColor(innerDarkColor);
-
-                if (count[0] == 0) {
-                    outerColors[outerColors.length - 1] = Color.parseColor(outerLightColor);
-                    innerColors[innerColors.length - 1] = Color.parseColor(innerLightColor);
-                } else {
-                    outerColors[count[0] - 1] = Color.parseColor(outerLightColor);
-                    innerColors[count[0] - 1] = Color.parseColor(innerLightColor);
-                }
-
-                if (count[0] == outerColors.length - 1) {
-                    outerColors[0] = Color.parseColor(outerLightColor);
-                    innerColors[0] = Color.parseColor(innerLightColor);
-                } else {
-                    outerColors[count[0] + 1] = Color.parseColor(outerLightColor);
-                    innerColors[count[0] + 1] = Color.parseColor(innerLightColor);
-                }
-
-                if (count[0] == 0) {
-                    outerColors[outerColors.length - 2] = Color.parseColor(outerExtraLightColor);
-                    innerColors[innerColors.length - 2] = Color.parseColor(innerExtraLigthColor);
-                } else if (count[0] == 1) {
-                    outerColors[outerColors.length - 1] = Color.parseColor(outerExtraLightColor);
-                    innerColors[innerColors.length - 1] = Color.parseColor(innerExtraLigthColor);
-                } else {
-                    outerColors[count[0] - 2] = Color.parseColor(outerExtraLightColor);
-                    innerColors[count[0] - 2] = Color.parseColor(innerExtraLigthColor);
-                }
-
-                if (count[0] == outerColors.length - 2) {
-                    outerColors[0] = Color.parseColor(outerExtraLightColor);
-                    innerColors[0] = Color.parseColor(innerExtraLigthColor);
-                } else if (count[0] == outerColors.length - 1) {
-                    outerColors[0 + 1] = Color.parseColor(outerExtraLightColor);
-                    innerColors[0 + 1] = Color.parseColor(innerExtraLigthColor);
-                } else {
-                    outerColors[count[0] + 2] = Color.parseColor(outerExtraLightColor);
-                    innerColors[count[0] + 2] = Color.parseColor(innerExtraLigthColor);
-                }
-
-                pieDataSetOuter.setColors(outerColors);
-                outerColors[count[0]] = outerColor;
-                pieDataSetInner.setColors(innerColors);
-                innerColors[count[0]] = innerColor;
-
-                pieChart.highlightValue(new Highlight(count[0], 0, 0));
-                pieChart1.highlightValue(new Highlight(count[0], 0, 0));
-                count[0]++;
-            }
-        }, 0, 1000);
+//
+//                if (count[0] == outerColors.length - 1) {
+//                    outerColors[0] = Color.parseColor(outerLightColor);
+//                    innerColors[0] = Color.parseColor(innerLightColor);
+//                } else {
+//                    outerColors[count[0] + 1] = Color.parseColor(outerLightColor);
+//                    innerColors[count[0] + 1] = Color.parseColor(innerLightColor);
+//                }
+//
+//                if (count[0] == 0) {
+//                    outerColors[outerColors.length - 2] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[innerColors.length - 2] = Color.parseColor(innerExtraLigthColor);
+//                } else if (count[0] == 1) {
+//                    outerColors[outerColors.length - 1] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[innerColors.length - 1] = Color.parseColor(innerExtraLigthColor);
+//                } else {
+//                    outerColors[count[0] - 2] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[count[0] - 2] = Color.parseColor(innerExtraLigthColor);
+//                }
+//
+//                if (count[0] == outerColors.length - 2) {
+//                    outerColors[0] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[0] = Color.parseColor(innerExtraLigthColor);
+//                } else if (count[0] == outerColors.length - 1) {
+//                    outerColors[0 + 1] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[0 + 1] = Color.parseColor(innerExtraLigthColor);
+//                } else {
+//                    outerColors[count[0] + 2] = Color.parseColor(outerExtraLightColor);
+//                    innerColors[count[0] + 2] = Color.parseColor(innerExtraLigthColor);
+//                }
+//
+//                pieDataSetOuter.setColors(outerColors);
+//                outerColors[count[0]] = outerColor;
+//                pieDataSetInner.setColors(innerColors);
+//                innerColors[count[0]] = innerColor;
+//
+//                pieChart.highlightValue(new Highlight(count[0], 0, 0));
+//                pieChart1.highlightValue(new Highlight(count[0], 0, 0));
+//                count[0]++;
+//            }
+//        }, 0, 500);
     }
 
 
     public void AddValuesToPIEENTRY() {
-        entries.add(new PieEntry(1f, 0));
-        entries.add(new PieEntry(1f, 1));
-        entries.add(new PieEntry(1f, 2));
-        entries.add(new PieEntry(1f, 3));
-        entries.add(new PieEntry(1f, 4));
-        entries.add(new PieEntry(1f, 5));
-        entries.add(new PieEntry(1f, 6));
-        entries.add(new PieEntry(1f, 7));
-        entries.add(new PieEntry(1f, 8));
-        entries.add(new PieEntry(1f, 9));
-        entries.add(new PieEntry(1f, 10));
-        entries.add(new PieEntry(1f, 11));
-        entries.add(new PieEntry(1f, 12));
-        entries.add(new PieEntry(1f, 13));
-        entries.add(new PieEntry(1f, 14));
-        entries.add(new PieEntry(1f, 15));
-        entries.add(new PieEntry(1f, 16));
-        entries.add(new PieEntry(1f, 17));
-        entries.add(new PieEntry(1f, 18));
-        entries.add(new PieEntry(1f, 19));
-        entries.add(new PieEntry(1f, 20));
-        entries.add(new PieEntry(1f, 21));
-        entries.add(new PieEntry(1f, 22));
-        entries.add(new PieEntry(1f, 23));
-        entries.add(new PieEntry(1f, 24));
-        entries.add(new PieEntry(1f, 25));
-        entries.add(new PieEntry(1f, 26));
-        entries.add(new PieEntry(1f, 27));
-        entries.add(new PieEntry(1f, 28));
-        entries.add(new PieEntry(1f, 29));
+//        entries.add(new PieEntry(1f, 0));
+//        entries.add(new PieEntry(1f, 1));
+//        entries.add(new PieEntry(1f, 2));
+//        entries.add(new PieEntry(1f, 3));
+//        entries.add(new PieEntry(1f, 4));
+//        entries.add(new PieEntry(1f, 5));
+//        entries.add(new PieEntry(1f, 6));
+//        entries.add(new PieEntry(1f, 7));
+//        entries.add(new PieEntry(1f, 8));
+//        entries.add(new PieEntry(1f, 9));
+//        entries.add(new PieEntry(1f, 10));
+//        entries.add(new PieEntry(1f, 11));
+//        entries.add(new PieEntry(1f, 12));
+//        entries.add(new PieEntry(1f, 13));
+//        entries.add(new PieEntry(1f, 14));
+//        entries.add(new PieEntry(1f, 15));
+//        entries.add(new PieEntry(1f, 16));
+//        entries.add(new PieEntry(1f, 17));
+//        entries.add(new PieEntry(1f, 18));
+//        entries.add(new PieEntry(1f, 19));
+//        entries.add(new PieEntry(1f, 20));
+//        entries.add(new PieEntry(1f, 21));
+//        entries.add(new PieEntry(1f, 22));
+//        entries.add(new PieEntry(1f, 23));
+//        entries.add(new PieEntry(1f, 24));
+//        entries.add(new PieEntry(1f, 25));
+//        entries.add(new PieEntry(1f, 26));
+//        entries.add(new PieEntry(1f, 27));
+//        entries.add(new PieEntry(1f, 28));
+//        entries.add(new PieEntry(1f, 29));
+        for (int i = 0; i < 30; i++) {
+            entries.add(new PieEntry(1f));
+        }
     }
 
     public void AddValuesToPieEntryLabels() {

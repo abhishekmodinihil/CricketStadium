@@ -1,5 +1,6 @@
 package com.example.roshannimje.baseballstadium;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -73,9 +74,9 @@ public class SpinnerActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Log.d("SpinnerActivity", "" + e.getMessage());
-                Toast.makeText(getApplicationContext(), "Error while adding information" , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Error while adding information" , Toast.LENGTH_SHORT).show();
             }
         });
-
+        startActivity(new Intent(this, MainActivity.class));
     }
 }
