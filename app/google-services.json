@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "556667124324",
+    "firebase_url": "https://cricket-stadium.firebaseio.com",
+    "project_id": "cricket-stadium",
+    "storage_bucket": "cricket-stadium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556667124324:android:b1a10dad6370763c",
+        "android_client_info": {
+          "package_name": "com.example.roshannimje.baseballstadium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556667124324-rc7h45qmfdjtmnjuqr4mjmok6gktaq66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roshannimje.baseballstadium",
+            "certificate_hash": "94c46b21e059a39614f200a31244af6516f7ad2e"
+          }
+        },
+        {
+          "client_id": "556667124324-p5par91m0q6otpbbugm9h8a7c2khg9he.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGBJOsmKcOLwbVH36mY2tlz33wCIiQTf4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556667124324-p5par91m0q6otpbbugm9h8a7c2khg9he.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
